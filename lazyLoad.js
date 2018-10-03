@@ -1,7 +1,10 @@
-/*
-@params data-imgurl 图片地址
-*/
-
+/**
+ * @author Lucas
+ * @name LazyLoad v1.0.0
+ * @description 图片懒加载
+ * 
+ * 
+ */
 ;(function (window){
 
     var lazyImgs = [], // 懒加载图片组

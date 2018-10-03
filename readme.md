@@ -15,3 +15,13 @@
 ## Compat
 * 因为部分用的是ES6语法，可能不支持比较旧的浏览器。
 * 对高版本的IE做了兼容处理
+
+# drag.js 原生拖拽
+## Usage
+```html
+<script src="drag.js"></script>
+<script>
+    var app = document.querySelector('#app');
+    var drag = new Drag(app);
+</script>
+```
