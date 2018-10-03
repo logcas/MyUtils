@@ -19,7 +19,6 @@
             if(!imgs || Object.prototype.toString.call(imgs) !== '[object Array]') {
                 throw new Error('add() 函数必须传入图片数组');
             }
-            console.log('add1');
             //this.lazyImgs = [].concat(this.lazyImgs,imgs);
             let imgsLength = imgs.length;
             for(let i = 0; i < imgsLength ; ++i) {
@@ -28,7 +27,6 @@
                 imgs[i].setAttribute('data-offsettop',offsetTop);
                 imgs[i].setAttribute('data-hasdisplay',0);
             }
-            console.log('add2');
 
             lazyImgs = [].concat(lazyImgs,imgs);
         }

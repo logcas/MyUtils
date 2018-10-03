@@ -3,6 +3,7 @@
 
 # lazyLoad.js 图片懒加载
 ## Usage
+将图片地址放入IMG标签的自定义`data-imgurl`中，`src`属性为空，然后这样：
 ```html
 <script src="lazyLoad.js"></script>
 <script>
