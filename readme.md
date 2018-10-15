@@ -12,9 +12,6 @@
     lazy.add(imgs); // imgs 必须是数组
 </script>
 ```
-## Compat
-* 因为部分用的是ES6语法，可能不支持比较旧的浏览器。
-* 对高版本的IE做了兼容处理
 
 # drag.js 原生拖拽
 ## Usage
@@ -25,3 +22,24 @@
     var drag = new Drag(app);
 </script>
 ```
+
+# Router.js 轻量级SPA路由
+## Usage
+```html
+<script src="src/index.js"></script>
+<script>
+    var router = new Router(document.getElementById('app'));
+    router.route('/p1',function(res) {
+        res.render(`Hello,${res.params.name}`);
+    });
+    router.route('/p2',function(res) {
+        res.render('this is page 2');
+    });
+</script>
+```
+
+## API
+* `route(path,callback)` 路由挂载
+其中`path`为路由路径，`callback`为接受一个`res`参数的回调杉树，`res`为`object`类型，有`res.render()`接受一个字符串作为渲染模板，`res.params`为解析查询字符串的对象。
+* `route.go(n)` 
+它只是调用了`window.history.go(n)`。
