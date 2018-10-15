@@ -40,6 +40,8 @@
 
 ## API
 * `route(path,callback)` 路由挂载
+
 其中`path`为路由路径，`callback`为接受一个`res`参数的回调杉树，`res`为`object`类型，有`res.render()`接受一个字符串作为渲染模板，`res.params`为解析查询字符串的对象。
 * `route.go(n)` 
+
 它只是调用了`window.history.go(n)`。
