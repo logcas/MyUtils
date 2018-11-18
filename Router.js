@@ -112,6 +112,27 @@
             window.history.go(n);
         }
 
+        push(path) {
+
+            var idx = path.indexOf('?'),
+                hash = '#' + path,
+                str = '';
+
+            if(idx !== -1) {
+                str = path.slice(idx + 1);
+                path = path.slice(0, idx);
+            }
+
+            var p = this.$routes[path];
+
+            if(!p) return;
+
+            window.location.hash = hash;
+
+            this._render(path,str);
+
+        }
+
     }
 
     window.Router = Router;
